@@ -6,4 +6,4 @@ If the share API isn't supported on the device, it will simply download the file
 
 ## Demo
 
-[Click Here](/src) to try the demo
+[Click Here](https://tom-j-irvine.github.io/websharedemo/src/) to try the demo
