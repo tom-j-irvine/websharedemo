@@ -2,14 +2,13 @@ const shareButton = document.querySelector('#share-button');
 
 shareButton.addEventListener('click', event => {
 
-    const filename = 'Horn_of_the_Metolius_v1.1.gpx';
-    const text = 'Horn of the Metolius';
+    const filename = 'Horn_of_the_Metolius_v1.1.gpx';    
 
-    tryShareFile(filename, text);    
+    tryShareFile(filename);    
 
 });
 
-const tryShareFile = (filename, text) => {
+const tryShareFile = (filename) => {
     
     fetch(filename)
         .then(function (response) {
@@ -22,8 +21,7 @@ const tryShareFile = (filename, text) => {
             if (navigator.canShare && navigator.canShare({ files: [file] })) {            
                 navigator.share({ 
                     files: [file], 
-                    title: 'Share GPX File',
-                    text: text ,                    
+                    title: 'Share GPX File'            
                 })
                 .then(() => {})
                 .catch(err => {
