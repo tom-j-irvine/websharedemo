@@ -16,7 +16,7 @@ const tryShareFile = (filename) => {
         })
         .then(function (blob) {
             // try to share
-            const file = new File([blob], filename, { type: blob.type });     
+            const file = new File([blob], filename, { type: 'application/gpx+xml' });     
             
             if (navigator.canShare && navigator.canShare({ files: [file] })) {            
                 navigator.share({ 
