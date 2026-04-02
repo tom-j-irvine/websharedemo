@@ -20,7 +20,7 @@ const tryShareFile = (filename) => {
             
             if (navigator.canShare && navigator.canShare({ files: [file] })) {            
                 navigator.share({ 
-                    //title: 'Share GPX File',
+                    title: 'Share GPX File',
                     files: [file]           
                 })
                 .then(() => {})
